@@ -43,6 +43,7 @@ class BasicUIScrollViewController: UIViewController {
         
         if (!didSetupConstraints) {
             
+            // Make constraints should be in ViewDidLoad, otherwise it can break with AutoMask constraints
             scrollView.snp.makeConstraints { make in
                 make.edges.equalTo(view).inset(UIEdgeInsets.zero)
             }
